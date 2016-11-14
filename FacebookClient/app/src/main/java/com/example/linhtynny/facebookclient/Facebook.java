@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.linhtynny.facebookclient.fragment.InboxFragment;
+import com.example.linhtynny.facebookclient.fragment.NewsfeedFragment;
 import com.example.linhtynny.facebookclient.fragment.NotificationFragment;
 
 public class Facebook extends AppCompatActivity {
@@ -50,12 +51,12 @@ public class Facebook extends AppCompatActivity {
 //                return new InboxFragment();
 //
                 switch (page) {
-//                    case 0: return NewsfeedFragment.newInstance();
+                    case 0: return NewsfeedFragment.newInstance("Newsfeed");
                     case 1: return NotificationFragment.newInstance("Notification");
                     case 2: return InboxFragment.newInstance("Message");
-//                    case 3: return ProfileFragment.newInstance();
+//                    case 3: return ProfileFragment.newInstance("Profile);
         }
-            return new InboxFragment(); // failsafe
+            return new NewsfeedFragment(); // failsafe
 
             }
 
