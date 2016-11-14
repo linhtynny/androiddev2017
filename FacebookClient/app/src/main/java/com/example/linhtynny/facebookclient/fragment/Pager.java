@@ -32,9 +32,9 @@ public class Pager extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceStase) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container2, Bundle savedInstanceStase) {
         View v = new View(getContext());
-        v = inflater.inflate(R.layout.fragment_notification, container, false);
+        v = inflater.inflate(R.layout.fragment_notification, container2, false);
 
         return v;
     }

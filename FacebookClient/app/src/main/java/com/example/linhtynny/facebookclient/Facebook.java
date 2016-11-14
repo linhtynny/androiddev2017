@@ -22,7 +22,7 @@ public class Facebook extends AppCompatActivity {
                 getSupportFragmentManager());
 
         ViewPager pager = (ViewPager) findViewById(R.id.container2);
-        pager.setOffscreenPageLimit(3);
+        pager.setOffscreenPageLimit(4);
         pager.setAdapter(adapter);
 
 
@@ -46,6 +46,14 @@ public class Facebook extends AppCompatActivity {
             @Override
             public Fragment getItem(int page) {
                 return new Pager();
+
+//                switch (page) {
+////            case 0: return Fragment1.newInstance();
+////            case 1: return Fragment2.newInstance();
+////            case 2: return Fragment3.newInstance();
+////        }
+//            return new Fragment(); // failsafe
+
             }
 
             @Override

@@ -11,4 +11,16 @@
     <string name="noti8"> Bạn bè của bạn đã thích bài viết của bạn trên trang của bạn </string>
     <string name="noti9"> Bạn bè của bạn đã bình luận bài viết của bạn trên trang của bạn </string>
     <string name="noti10"> Bạn bè của bạn đã chọc bạn </string>
+
+    <string name="msg1"> Bạn của bạn A đã gửi cho bạn một tin nhắn </string>
+    <string name="msg2"> Bạn của bạn B đã gửi cho bạn một tin nhắn </string>
+    <string name="msg3"> Bạn của bạn C đã gửi cho bạn một tin nhắn </string>
+    <string name="msg4"> Bạn của bạn D đã gửi cho bạn một tin nhắn </string>
+    <string name="msg5"> Bạn của bạn E đã gửi cho bạn một tin nhắn </string>
+    <string name="msg6"> Bạn của bạn F đã gửi cho bạn một tin nhắn </string>
+    <string name="msg7"> Bạn của bạn G đã gửi cho bạn một tin nhắn </string>
+    <string name="msg8"> Bạn của bạn H đã gửi cho bạn một tin nhắn </string>
+    <string name="msg9"> Bạn của bạn I đã gửi cho bạn một tin nhắn </string>
+    <string name="msg10"> Bạn của bạn K đã gửi cho bạn một tin nhắn </string>
+
 </resources>

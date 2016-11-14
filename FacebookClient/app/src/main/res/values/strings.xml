@@ -12,4 +12,16 @@
     <string name="noti9"> Your friend commented on your post in your page </string>
     <string name="noti10"> Your friend poked you </string>
 
+    <string name="msg1"> Your friend A sent you a message </string>
+    <string name="msg2"> Your friend B sent you a message </string>
+    <string name="msg3"> Your friend C sent you a message </string>
+    <string name="msg4"> Your friend D sent you a message </string>
+    <string name="msg5"> Your friend E sent you a message </string>
+    <string name="msg6"> Your friend F sent you a message </string>
+    <string name="msg7"> Your friend G sent you a message </string>
+    <string name="msg8"> Your friend H sent you a message </string>
+    <string name="msg9"> Your friend I sent you a message </string>
+    <string name="msg10"> Your friend K sent you a message </string>
+
+
 </resources>
