@@ -13,29 +13,29 @@ import com.example.linhtynny.facebookclient.R;
  * Created by linhtynny on 15/11/2016.
  */
 
-public class NewsfeedFragment extends Fragment{
-    private static final String TAG = "NewsfeedFrag";
+public class ProfileFragment extends Fragment {
+    private static final String TAG = "ProfileFrag";
 
-    public NewsfeedFragment() {
+    public ProfileFragment() {
 
     }
 
-    public static NewsfeedFragment newInstance(String chosen) {
+    public static ProfileFragment newInstance(String chosen) {
         Bundle args = new Bundle();
         args.putString("chosen", chosen);
 
-        NewsfeedFragment newsfeedfragment = new NewsfeedFragment();
-        newsfeedfragment.setArguments(args);
+        ProfileFragment profilefragment = new ProfileFragment();
+        profilefragment.setArguments(args);
 
 
-        return newsfeedfragment;
+        return profilefragment;
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container2, Bundle savedInstanceStase) {
         View v = new View(getContext());
-        v = inflater.inflate(R.layout.fragment_newsfeed, container2, false);
+        v = inflater.inflate(R.layout.fragment_profile, container2, false);
 
         return v;
     }

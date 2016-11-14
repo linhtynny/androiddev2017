@@ -12,6 +12,7 @@ import android.os.Bundle;
 import com.example.linhtynny.facebookclient.fragment.InboxFragment;
 import com.example.linhtynny.facebookclient.fragment.NewsfeedFragment;
 import com.example.linhtynny.facebookclient.fragment.NotificationFragment;
+import com.example.linhtynny.facebookclient.fragment.ProfileFragment;
 
 public class Facebook extends AppCompatActivity {
 
@@ -54,7 +55,7 @@ public class Facebook extends AppCompatActivity {
                     case 0: return NewsfeedFragment.newInstance("Newsfeed");
                     case 1: return NotificationFragment.newInstance("Notification");
                     case 2: return InboxFragment.newInstance("Message");
-//                    case 3: return ProfileFragment.newInstance("Profile);
+                    case 3: return ProfileFragment.newInstance("Profile");
         }
             return new NewsfeedFragment(); // failsafe
 
