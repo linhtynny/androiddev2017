@@ -9,7 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.linhtynny.facebookclient.fragment.Pager;
+import com.example.linhtynny.facebookclient.fragment.InboxFragment;
+import com.example.linhtynny.facebookclient.fragment.NotificationFragment;
 
 public class Facebook extends AppCompatActivity {
 
@@ -45,14 +46,16 @@ public class Facebook extends AppCompatActivity {
 
             @Override
             public Fragment getItem(int page) {
-                return new Pager();
-
-//                switch (page) {
-////            case 0: return Fragment1.newInstance();
-////            case 1: return Fragment2.newInstance();
-////            case 2: return Fragment3.newInstance();
-////        }
-//            return new Fragment(); // failsafe
+//                return new NotificationFragment();
+//                return new InboxFragment();
+//
+                switch (page) {
+//                    case 0: return NewsfeedFragment.newInstance();
+                    case 1: return NotificationFragment.newInstance("Notification");
+                    case 2: return InboxFragment.newInstance("Message");
+//                    case 3: return ProfileFragment.newInstance();
+        }
+            return new InboxFragment(); // failsafe
 
             }
 

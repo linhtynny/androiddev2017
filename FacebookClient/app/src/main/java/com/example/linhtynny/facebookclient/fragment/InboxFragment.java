@@ -10,24 +10,24 @@ import android.view.ViewGroup;
 import com.example.linhtynny.facebookclient.R;
 
 /**
- * Created by linhtynny on 14/11/2016.
+ * Created by linhtynny on 15/11/2016.
  */
-public class Pager extends Fragment {
-    private static final String TAG = "WeatherForecastFrag";
+public class InboxFragment extends Fragment {
+    private static final String TAG = "InboxFrag";
 
-    public Pager() {
+    public InboxFragment() {
 
     }
 
-    public static Pager newInstance(String chosen) {
+    public static InboxFragment newInstance(String chosen) {
         Bundle args = new Bundle();
         args.putString("chosen", chosen);
 
-        Pager fragment = new Pager();
-        fragment.setArguments(args);
+        InboxFragment inbfragment = new InboxFragment();
+        inbfragment.setArguments(args);
 
 
-        return fragment;
+        return inbfragment;
     }
 
     @Nullable
