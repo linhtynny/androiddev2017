@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.linhtynny.facebookclient.fragment.FriendFragment;
 import com.example.linhtynny.facebookclient.fragment.InboxFragment;
 import com.example.linhtynny.facebookclient.fragment.NewsfeedFragment;
 import com.example.linhtynny.facebookclient.fragment.NotificationFragment;
@@ -25,7 +26,7 @@ public class Facebook extends AppCompatActivity {
                 getSupportFragmentManager());
 
         ViewPager pager = (ViewPager) findViewById(R.id.container2);
-        pager.setOffscreenPageLimit(4);
+        pager.setOffscreenPageLimit(5);
         pager.setAdapter(adapter);
 
 
@@ -34,8 +35,8 @@ public class Facebook extends AppCompatActivity {
     }
 
         class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
-            private final int PAGE_COUNT = 4;
-            private String location[] = new String[]{"NewsFeed", "Notification", "Message", "Profile"};
+            private final int PAGE_COUNT = 5;
+            private String location[] = new String[]{"NewsFeed", "Friend", "Notification", "Message", "Profile"};
 
             public HomeFragmentPagerAdapter(FragmentManager fm) {
                 super(fm);
@@ -53,9 +54,10 @@ public class Facebook extends AppCompatActivity {
 //
                 switch (page) {
                     case 0: return NewsfeedFragment.newInstance("Newsfeed");
-                    case 1: return NotificationFragment.newInstance("Notification");
-                    case 2: return InboxFragment.newInstance("Message");
-                    case 3: return ProfileFragment.newInstance("Profile");
+                    case 1: return FriendFragment.newInstance("Friend");
+                    case 2: return NotificationFragment.newInstance("Notification");
+                    case 3: return InboxFragment.newInstance("Message");
+                    case 4: return ProfileFragment.newInstance("Profile");
         }
             return new NewsfeedFragment(); // failsafe
 
