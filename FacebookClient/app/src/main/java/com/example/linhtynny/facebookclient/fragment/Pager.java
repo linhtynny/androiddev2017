@@ -34,7 +34,7 @@ public class Pager extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container2, Bundle savedInstanceStase) {
         View v = new View(getContext());
-        v = inflater.inflate(R.layout.fragment_notification, container2, false);
+        v = inflater.inflate(R.layout.fragment_inbox, container2, false);
 
         return v;
     }
