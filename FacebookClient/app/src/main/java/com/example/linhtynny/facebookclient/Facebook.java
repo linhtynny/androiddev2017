@@ -32,7 +32,7 @@ public class Facebook extends AppCompatActivity {
 
         class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
             private final int PAGE_COUNT = 4;
-            private String location[] = new String[]{"News Feed", "Notification", "Message", "Profile"};
+            private String location[] = new String[]{"NewsFeed", "Notification", "Message", "Profile"};
 
             public HomeFragmentPagerAdapter(FragmentManager fm) {
                 super(fm);

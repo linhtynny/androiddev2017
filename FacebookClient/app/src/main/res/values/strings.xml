@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">FacebookClient</string>
+
+    <string name="noti1"> Your friend posted on on your timeline </string>
+    <string name="noti2"> Your friend liked your post </string>
+    <string name="noti3"> Your friend commented on your post </string>
+    <string name="noti4"> Your friend posted on on your timeline </string>
+    <string name="noti5"> Your friend liked your post in your group </string>
+    <string name="noti6"> Your friend commented on your post in your group </string>
+    <string name="noti7"> Your friend posted on on your timeline </string>
+    <string name="noti8"> Your friend liked your post in your page </string>
+    <string name="noti9"> Your friend commented on your post in your page </string>
+    <string name="noti10"> Your friend poked you </string>
+
 </resources>

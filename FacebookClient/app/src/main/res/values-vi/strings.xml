@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FacebookClient</string>
+
+    <string name="noti1"> Bạn bè của bạn đã đăng lên dòng thời gian của bạn </string>
+    <string name="noti2"> Bạn bè của bạn đã thích bài viết của bạn </string>
+    <string name="noti3"> Bạn bè của bạn đã bình luận bài viết của bạn </string>
+    <string name="noti4"> Bạn bè của bạn đã đăng lên dòng thời gian của bạn </string>
+    <string name="noti5"> Bạn bè của bạn đã thích bài viết của bạn trong nhóm của bạn </string>
+    <string name="noti6"> Your friend commented on your post in your group </string>
+    <string name="noti7"> Bạn bè của bạn đã bình luận bài viết của bạn trong nhóm của bạn </string>
+    <string name="noti8"> Bạn bè của bạn đã thích bài viết của bạn trên trang của bạn </string>
+    <string name="noti9"> Bạn bè của bạn đã bình luận bài viết của bạn trên trang của bạn </string>
+    <string name="noti10"> Bạn bè của bạn đã chọc bạn </string>
+</resources>
