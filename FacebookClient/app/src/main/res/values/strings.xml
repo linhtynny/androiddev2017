@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FacebookClient</string>
 
+
     <string name="noti1"> Your friend posted on your timeline </string>
     <string name="noti2"> Your friend liked your post </string>
     <string name="noti3"> Your friend commented on your post </string>
@@ -11,6 +12,7 @@
     <string name="noti8"> Your friend liked your post in your page </string>
     <string name="noti9"> Your friend commented on your post in your page </string>
     <string name="noti10"> Your friend poked you </string>
+    <string name="noti14"> Your friend hated you!</string>
 
     <string name="msg1"> Your friend A sent you a message </string>
     <string name="msg2"> Your friend B sent you a message </string>
