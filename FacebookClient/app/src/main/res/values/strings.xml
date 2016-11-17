@@ -22,6 +22,10 @@
     <string name="msg8"> Your friend H sent you a message </string>
     <string name="msg9"> Your friend I sent you a message </string>
     <string name="msg10"> Your friend K sent you a message </string>
+    <string name="noti11">2 days ago</string>
+    <string name="noti12">1 day ago</string>
+    <string name="noti13">22 hours ago</string>
+    <string name="notifications">Notifications</string>
 
 
 </resources>

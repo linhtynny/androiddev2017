@@ -22,5 +22,9 @@
     <string name="msg8"> Bạn của bạn H đã gửi cho bạn một tin nhắn </string>
     <string name="msg9"> Bạn của bạn I đã gửi cho bạn một tin nhắn </string>
     <string name="msg10"> Bạn của bạn K đã gửi cho bạn một tin nhắn </string>
+    <string name="noti11">2 ngày trước</string>
+    <string name="noti12">1 ngày trước</string>
+    <string name="noti13">22 giờ trước</string>
+    <string name="notifications">Thông báo mới</string>
 
 </resources>
