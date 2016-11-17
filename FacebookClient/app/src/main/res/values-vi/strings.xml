@@ -13,19 +13,29 @@
     <string name="noti10"> Bạn bè của bạn đã chọc bạn </string>
     <string name="noti14"> Bạn bè của bạn đã ghét bạn!</string>
 
-    <string name="msg1"> Bạn của bạn A đã gửi cho bạn một tin nhắn </string>
-    <string name="msg2"> Bạn của bạn B đã gửi cho bạn một tin nhắn </string>
-    <string name="msg3"> Bạn của bạn C đã gửi cho bạn một tin nhắn </string>
-    <string name="msg4"> Bạn của bạn D đã gửi cho bạn một tin nhắn </string>
-    <string name="msg5"> Bạn của bạn E đã gửi cho bạn một tin nhắn </string>
-    <string name="msg6"> Bạn của bạn F đã gửi cho bạn một tin nhắn </string>
-    <string name="msg7"> Bạn của bạn G đã gửi cho bạn một tin nhắn </string>
-    <string name="msg8"> Bạn của bạn H đã gửi cho bạn một tin nhắn </string>
-    <string name="msg9"> Bạn của bạn I đã gửi cho bạn một tin nhắn </string>
-    <string name="msg10"> Bạn của bạn K đã gửi cho bạn một tin nhắn </string>
+    <string name="msg1"> Hello. Nice to meet you! </string>
+    <string name="msg2"> Call me back </string>
+    <string name="msg3"> Are you ok? </string>
+    <string name="msg4"> Heyyyyy </string>
+    <string name="msg5"> Good night! </string>
+    <string name="msg6"> Bye </string>
+    <string name="msg7"> :) </string>
+    <string name="msg8"> Yes </string>
+    <string name="msg9"> so? </string>
+    <string name="msg10"> Ok. </string>
+
     <string name="noti11">2 ngày trước</string>
     <string name="noti12">1 ngày trước</string>
     <string name="noti13">22 giờ trước</string>
+    <string name="Monday"> Thu Hai </string>
+    <string name="Tuesday"> Thu Ba</string>
+    <string name="Wednesday"> Thu Tu</string>
+    <string name="Thursday"> Thu Nam</string>
+    <string name="Friday"> Thu Sau </string>
+    <string name="Saturday"> Thu Bay </string>
+    <string name="Sunday"> Chu Nhat </string>
+
     <string name="notifications">Thông báo mới</string>
+    <string name="messages"> Tin nhắn </string>
 
 </resources>

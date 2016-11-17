@@ -51,7 +51,7 @@ public class Facebook extends AppCompatActivity {
             public Fragment getItem(int page) {
 //                return new NotificationFragment();
 //                return new InboxFragment();
-//
+//omeFrag
                 switch (page) {
                     case 0: return NewsfeedFragment.newInstance("Newsfeed");
                     case 1: return FriendFragment.newInstance("Friend");

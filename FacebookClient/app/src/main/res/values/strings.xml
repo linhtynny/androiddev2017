@@ -14,20 +14,30 @@
     <string name="noti10"> Your friend poked you </string>
     <string name="noti14"> Your friend hated you!</string>
 
-    <string name="msg1"> Your friend A sent you a message </string>
-    <string name="msg2"> Your friend B sent you a message </string>
-    <string name="msg3"> Your friend C sent you a message </string>
-    <string name="msg4"> Your friend D sent you a message </string>
-    <string name="msg5"> Your friend E sent you a message </string>
-    <string name="msg6"> Your friend F sent you a message </string>
-    <string name="msg7"> Your friend G sent you a message </string>
-    <string name="msg8"> Your friend H sent you a message </string>
-    <string name="msg9"> Your friend I sent you a message </string>
-    <string name="msg10"> Your friend K sent you a message </string>
+    <string name="msg1"> Hello. Nice to meet you! </string>
+    <string name="msg2"> Call me back </string>
+    <string name="msg3"> Are you ok? </string>
+    <string name="msg4"> Heyyyyy </string>
+    <string name="msg5"> Good night! </string>
+    <string name="msg6"> Bye </string>
+    <string name="msg7"> :) </string>
+    <string name="msg8"> Yes </string>
+    <string name="msg9"> so? </string>
+    <string name="msg10"> Ok. </string>
+
     <string name="noti11">2 days ago</string>
     <string name="noti12">1 day ago</string>
     <string name="noti13">22 hours ago</string>
+    <string name="Monday"> Mon </string>
+    <string name="Tuesday"> Tue</string>
+    <string name="Wednesday"> Wed </string>
+    <string name="Thursday"> Thur</string>
+    <string name="Friday"> Fri </string>
+    <string name="Saturday"> Sat </string>
+    <string name="Sunday"> Sun </string>
+
     <string name="notifications">Notifications</string>
+    <string name="messages"> Messages </string>
 
 
 </resources>
