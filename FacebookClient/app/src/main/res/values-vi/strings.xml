@@ -37,5 +37,7 @@
 
     <string name="notifications">Thông báo mới</string>
     <string name="messages"> Tin nhắn </string>
+    <string name="friends">Bạn bè</string>
+    <string name="search">Tìm...</string>
 
 </resources>
