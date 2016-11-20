@@ -53,5 +53,7 @@
     <string name="what_s_on_your_mind">Bạn đang nghĩ gì?</string>
     <string name="action_search">" Đang tìm kiếm"</string>
     <string name="describe">Mô tả bản thân</string>
+    <string name="introduce">Giới thiệu</string>
+    <string name="work"> Đã làm việc tại 211b Phố Baker </string>
 
 </resources>

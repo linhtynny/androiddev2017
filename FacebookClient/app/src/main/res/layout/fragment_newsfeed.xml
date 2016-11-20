@@ -311,6 +311,7 @@
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
                         app:srcCompat="@drawable/comments"/>
+
                     <TextView
                         android:text="@string/comment"
                         android:textColor="#646566"
