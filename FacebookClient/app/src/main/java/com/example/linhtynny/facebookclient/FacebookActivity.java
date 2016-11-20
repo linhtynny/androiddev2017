@@ -15,7 +15,7 @@ import com.example.linhtynny.facebookclient.fragment.NewsfeedFragment;
 import com.example.linhtynny.facebookclient.fragment.NotificationFragment;
 import com.example.linhtynny.facebookclient.fragment.ProfileFragment;
 
-public class Facebook extends AppCompatActivity {
+public class FacebookActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

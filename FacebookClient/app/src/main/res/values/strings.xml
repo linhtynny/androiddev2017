@@ -36,6 +36,10 @@
     <string name="Saturday"> Sat </string>
     <string name="Sunday"> Sun </string>
 
+    <string name="sign_in_to_facebook">Sign in to Facebook</string>
+    <string name="username_or_email">Username or Email</string>
+    <string name="log_in">LOG IN</string>
+    <string name="password">Password</string>
     <string name="notifications">Notifications</string>
     <string name="messages"> Messages </string>
     <string name="friends">Friends</string>
