@@ -44,7 +44,10 @@
     <string name="notifications">Notifications</string>
     <string name="messages"> Messages </string>
     <string name="friends">Friends</string>
-    <string name="search">Search...</string>
+    <string name="search">Search</string>
+    <string name="action_search">Searching</string>
+    <string name="refresh">Refresh</string>
+    <string name="setting"> Setting</string>
 
 
 </resources>

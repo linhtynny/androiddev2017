@@ -1,5 +1,10 @@
 package com.example.linhtynny.facebookclient;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +14,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.linhtynny.facebookclient.fragment.FriendFragment;
 import com.example.linhtynny.facebookclient.fragment.InboxFragment;
@@ -18,6 +26,7 @@ import com.example.linhtynny.facebookclient.fragment.NotificationFragment;
 import com.example.linhtynny.facebookclient.fragment.ProfileFragment;
 
 public class FacebookActivity extends AppCompatActivity {
+    static CharSequence content;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,5 +84,45 @@ public class FacebookActivity extends AppCompatActivity {
                 // returns a tab title corresponding to the specified page
                 return location[page];
             }
+    }
+
+    final Handler handler = new Handler(Looper.getMainLooper()) {
+        @Override
+        public void handleMessage(Message msg) {
+            Context context = getApplicationContext();
+            content = msg.getData().getString("server_response");
+            Toast toast = Toast.makeText(context, content, Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    };
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_facebook, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+              Thread t = new Thread(new Runnable() {
+                @Override
+                public void run() {
+// do something heavy in the new thread.
+// don't access UI Views here.
+                Bundle bundle = new Bundle();
+                bundle.putString("server_response", "Searching");
+                Message msg = new Message();
+                msg.setData(bundle);
+                handler.sendMessage(msg);
+            }
+        });
+        t.start();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
