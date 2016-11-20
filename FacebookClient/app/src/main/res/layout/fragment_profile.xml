@@ -13,7 +13,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="40dp">
 
             <SearchView
                 android:layout_width="wrap_content"
@@ -25,10 +25,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:ems="10"
+                android:ems="7"
                 android:id="@+id/editText"
-                android:layout_weight="1"
+                android:layout_weight="0.58"
                 android:hint="@string/search" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginUp="20dp"
+                app:srcCompat="@drawable/setting"/>
 
         </LinearLayout>
 
@@ -205,16 +212,18 @@
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#434444"
-                android:text="@string/post1"
+                android:text="@string/post5"
                 android:layout_marginLeft="10dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1 Like"
+                android:text="100 Like"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"/>
             <LinearLayout
@@ -316,16 +325,18 @@
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#434444"
-                android:text="@string/post1"
+                android:text="@string/post4"
                 android:layout_marginLeft="10dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1 Like"
+                android:text="1001 Like"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"/>
             <LinearLayout
@@ -400,6 +411,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#8b8d8e">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
@@ -438,12 +455,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#434444"
-                android:text="@string/post1"
+                android:text="@string/post2"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1 Like"
+                android:text="2161 Like"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"/>
             <LinearLayout
@@ -512,12 +529,6 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="#8b8d8e">
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
@@ -555,12 +566,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#434444"
-                android:text="@string/post1"
+                android:text="@string/post3"
                 android:layout_marginLeft="10dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1 Like"
+                android:text="200 Like"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"/>
             <LinearLayout

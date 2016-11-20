@@ -59,6 +59,10 @@
     <string name="what_s_on_your_mind">What\'s on your mind?</string>
 
     <string name="describe"> Describe yourself</string>
+    <string name="post2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</string>
+    <string name="post3">In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</string>
+    <string name="post4">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</string>
+    <string name="post5">ayy lmaoo</string>
 
 
 </resources>
