@@ -55,5 +55,8 @@
     <string name="describe">Mô tả bản thân</string>
     <string name="introduce">Giới thiệu</string>
     <string name="work"> Đã làm việc tại 211b Phố Baker </string>
-
+    <string name="edu">Đã tốt nghiệp từ USTH</string>
+    <string name="hometown"> Đến từ Hà Nội</string>
+    <string name="single"> Độc thân </string>
+    <string name="follow"> 100,000 người theo dõi</string>
 </resources>
