@@ -39,6 +39,7 @@
     <string name="email_or_phone">Email hoặc điện thoại</string>
     <string name="log_in">Đăng nhập</string>
     <string name="password">Mật khẩu</string>
+    <string name="forgot_password"> Quên mật khẩu? </string>
     <string name="notifications">Thông báo mới</string>
     <string name="messages"> Tin nhắn </string>
     <string name="friends">Bạn bè</string>

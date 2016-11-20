@@ -66,6 +66,17 @@
             android:ems="20"
             android:id="@+id/button" />
 
+        <TextView
+            android:text="@string/forgot_password"
+            android:textColor="@color/lightgray"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/button"/>
+
+
     </RelativeLayout>
 
 </LinearLayout>
