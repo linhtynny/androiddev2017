@@ -27,17 +27,21 @@
     <string name="noti11">2 ngày trước</string>
     <string name="noti12">1 ngày trước</string>
     <string name="noti13">22 giờ trước</string>
-    <string name="Monday"> Thu Hai </string>
-    <string name="Tuesday"> Thu Ba</string>
-    <string name="Wednesday"> Thu Tu</string>
-    <string name="Thursday"> Thu Nam</string>
-    <string name="Friday"> Thu Sau </string>
-    <string name="Saturday"> Thu Bay </string>
-    <string name="Sunday"> Chu Nhat </string>
+    <string name="Monday"> Thứ Hai </string>
+    <string name="Tuesday"> Thứ Ba</string>
+    <string name="Wednesday"> Thứ Tư</string>
+    <string name="Thursday">Thứ Năm</string>
+    <string name="Friday">Thứ Sáu </string>
+    <string name="Saturday"> Thứ Bảy </string>
+    <string name="Sunday"> Chủ Nhật </string>
 
+    <string name="language"> Tiếng Việt</string>
+    <string name="email_or_phone">Email hoặc điện thoại</string>
+    <string name="log_in">Đăng nhập</string>
+    <string name="password">Mật khẩu</string>
     <string name="notifications">Thông báo mới</string>
     <string name="messages"> Tin nhắn </string>
     <string name="friends">Bạn bè</string>
-    <string name="search">Tìm...</string>
+    <string name="search">Tìm kiếm </string>
 
 </resources>
