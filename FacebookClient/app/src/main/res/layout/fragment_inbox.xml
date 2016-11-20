@@ -35,7 +35,7 @@
             android:layout_marginBottom="3dp"
             app:srcCompat="@drawable/emma"/>
         <LinearLayout
-            android:layout_width="210dp"
+            android:layout_width="230dp"
             android:layout_height="60dp"
             android:orientation="vertical">
             <TextView
@@ -52,11 +52,22 @@
                 android:text="@string/msg1"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
-        <TextView
-            android:text="@string/Monday"
+        <LinearLayout
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:gravity="center"/>
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/Monday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                app:srcCompat="@drawable/seenicon"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +84,7 @@
             android:layout_marginBottom="3dp"
             app:srcCompat="@drawable/cumberbatch"/>
         <LinearLayout
-            android:layout_width="210dp"
+            android:layout_width="230dp"
             android:layout_height="60dp"
             android:orientation="vertical">
             <TextView
@@ -90,11 +101,22 @@
                 android:text="@string/msg2"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
-        <TextView
-            android:text="@string/Tuesday"
+        <LinearLayout
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:gravity="center"/>
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/Tuesday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                app:srcCompat="@drawable/seenicon"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -187,7 +209,7 @@
             android:layout_marginBottom="3dp"
             app:srcCompat="@drawable/cumberbatch"/>
         <LinearLayout
-            android:layout_width="210dp"
+            android:layout_width="230dp"
             android:layout_height="60dp"
             android:orientation="vertical">
             <TextView
@@ -204,11 +226,22 @@
                 android:text="@string/msg5"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
-        <TextView
-            android:text="@string/Thursday"
+        <LinearLayout
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:gravity="center"/>
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/Thursday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                app:srcCompat="@drawable/seenicon"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -264,7 +297,7 @@
             android:layout_marginBottom="3dp"
             app:srcCompat="@drawable/cumberbatch"/>
         <LinearLayout
-            android:layout_width="210dp"
+            android:layout_width="230dp"
             android:layout_height="60dp"
             android:orientation="vertical">
             <TextView
@@ -281,11 +314,22 @@
                 android:text="@string/msg7"
                 android:layout_marginLeft="10dp"/>
         </LinearLayout>
-        <TextView
-            android:text="@string/Friday"
+        <LinearLayout
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:gravity="center"/>
+            android:orientation="vertical">
+            <TextView
+                android:text="@string/Friday"
+                android:layout_width="60dp"
+                android:layout_height="30dp"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                app:srcCompat="@drawable/seenicon"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
