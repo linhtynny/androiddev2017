@@ -51,5 +51,7 @@
     <string name="share">Chia sẻ</string>
     <string name="comment">Bình luận</string>
     <string name="what_s_on_your_mind">Bạn đang nghĩ gì?</string>
+    <string name="action_search">" Đang tìm kiếm"</string>
+    <string name="describe">Mô tả bản thân</string>
 
 </resources>
