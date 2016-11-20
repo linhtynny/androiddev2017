@@ -8,9 +8,11 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.example.linhtynny.facebookclient.fragment.FriendFragment;
 import com.example.linhtynny.facebookclient.fragment.InboxFragment;
+import com.example.linhtynny.facebookclient.fragment.LoginFragment;
 import com.example.linhtynny.facebookclient.fragment.NewsfeedFragment;
 import com.example.linhtynny.facebookclient.fragment.NotificationFragment;
 import com.example.linhtynny.facebookclient.fragment.ProfileFragment;
@@ -25,6 +27,7 @@ public class FacebookActivity extends AppCompatActivity {
         PagerAdapter adapter = new HomeFragmentPagerAdapter(
                 getSupportFragmentManager());
 
+
         ViewPager pager = (ViewPager) findViewById(R.id.container2);
         pager.setOffscreenPageLimit(5);
         pager.setAdapter(adapter);
@@ -32,6 +35,10 @@ public class FacebookActivity extends AppCompatActivity {
 
         TabLayout tableLayout = (TabLayout) findViewById(R.id.container1);
         tableLayout.setupWithViewPager(pager);
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
     }
 
         class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
@@ -59,7 +66,7 @@ public class FacebookActivity extends AppCompatActivity {
                     case 3: return InboxFragment.newInstance("Message");
                     case 4: return ProfileFragment.newInstance("Profile");
         }
-            return new NewsfeedFragment(); // failsafe
+            return new LoginFragment(); // failsafe
 
             }
 
