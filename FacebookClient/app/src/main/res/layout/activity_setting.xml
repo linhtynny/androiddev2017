@@ -12,16 +12,9 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#b7d8f7"></LinearLayout>
-
-        <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="25dp">
-
-        </LinearLayout>
+            android:layout_height="15dp"></LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -50,7 +43,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="20dp"></LinearLayout>
+            android:layout_height="15dp"></LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -64,7 +57,7 @@
                 app:srcCompat="@drawable/setting"
                 android:id="@+id/imageView3"
                 android:layout_weight="0.01"
-                android:layout_width="17dp" />
+                android:layout_width="30dp" />
 
             <TextView
                 android:id="@+id/work3"
@@ -79,6 +72,11 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
 
         <LinearLayout
             android:orientation="horizontal"
@@ -88,11 +86,11 @@
             android:weightSum="1">
 
             <ImageView
-                android:layout_width="17dp"
                 app:srcCompat="@drawable/lang"
                 android:id="@+id/imageView4"
                 android:layout_weight="0.01"
-                android:layout_height="30dp" />
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
 
             <TextView
                 android:id="@+id/work7"
@@ -111,6 +109,11 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
@@ -119,8 +122,8 @@
                 app:srcCompat="@drawable/nf"
                 android:id="@+id/imageView5"
                 android:layout_weight="0.03"
-                android:layout_width="14dp"
-                android:layout_height="30dp" />
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
 
             <TextView
                 android:id="@+id/htown"
@@ -138,6 +141,13 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
@@ -147,7 +157,7 @@
                 app:srcCompat="@drawable/acc"
                 android:id="@+id/imageView7"
                 android:layout_weight="0.01"
-                android:layout_width="17dp" />
+                android:layout_width="30dp" />
 
             <TextView
                 android:id="@+id/work9"
@@ -165,6 +175,11 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
@@ -173,7 +188,7 @@
                 android:layout_height="30dp"
                 app:srcCompat="@drawable/lock"
                 android:id="@+id/imageView8"
-                android:layout_width="20dp" />
+                android:layout_width="30dp" />
 
             <TextView
                 android:id="@+id/work10"
@@ -191,15 +206,20 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
 
             <ImageView
-                android:layout_width="20dp"
                 android:layout_height="30dp"
                 app:srcCompat="@drawable/qs"
-                android:id="@+id/imageView9" />
+                android:id="@+id/imageView9"
+                android:layout_width="30dp" />
 
             <TextView
                 android:id="@+id/work1"
@@ -217,6 +237,11 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
@@ -226,7 +251,7 @@
                 app:srcCompat="@drawable/log"
                 android:id="@+id/imageView10"
                 android:layout_weight="0.00"
-                android:layout_width="20dp" />
+                android:layout_width="30dp" />
 
             <TextView
                 android:id="@+id/work6"
@@ -244,15 +269,20 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
 
             <ImageView
-                android:layout_height="30sp"
                 app:srcCompat="@drawable/privacy"
                 android:id="@+id/imageView11"
-                android:layout_width="20dp" />
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
 
             <TextView
                 android:id="@+id/hometown"
@@ -270,15 +300,20 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
 
             <ImageView
-                android:layout_height="30sp"
                 app:srcCompat="@drawable/policy"
                 android:id="@+id/imageView12"
-                android:layout_width="20dp" />
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
 
             <TextView
                 android:id="@+id/work"
@@ -296,15 +331,20 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
 
             <ImageView
-                android:layout_height="30sp"
                 app:srcCompat="@drawable/report"
                 android:id="@+id/imageView13"
-                android:layout_width="20dp" />
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
 
             <TextView
                 android:id="@+id/work13"
@@ -322,15 +362,19 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:weightSum="1">
 
             <ImageView
-                android:layout_height="30sp"
                 app:srcCompat="@drawable/data"
                 android:id="@+id/imageView14"
-                android:layout_width="20dp" />
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
 
             <TextView
                 android:id="@+id/work5"
@@ -348,6 +392,11 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
+            android:layout_height="7dp"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:weightSum="1">
@@ -355,8 +404,8 @@
             <ImageView
                 app:srcCompat="@drawable/logout"
                 android:id="@+id/imageView15"
-                android:layout_width="20dp"
-                android:layout_height="30dp" />
+                android:layout_height="30dp"
+                android:layout_width="30dp" />
 
             <TextView
                 android:id="@+id/work4"
