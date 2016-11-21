@@ -12,9 +12,22 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#b7d8f7">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:text="@string/proflie"
+                android:textColor="#000000"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="40dp">
+            android:layout_height="38dp">
 
             <SearchView
                 android:layout_width="wrap_content"
@@ -29,13 +42,15 @@
                 android:ems="7"
                 android:id="@+id/editText"
                 android:layout_weight="0.58"
-                android:hint="@string/search" />
+                android:hint="@string/search"
+                android:textSize="16sp" />
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
                 android:layout_marginLeft="200dp"
-                app:srcCompat="@drawable/setting"/>
+                app:srcCompat="@drawable/setting"
+                android:adjustViewBounds="true"
+                android:layout_height="25dp"
+                android:layout_width="25dp" />
 
         </LinearLayout>
 
@@ -48,8 +63,8 @@
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:src="@drawable/cover" >
+                android:src="@drawable/cover"
+                android:layout_height="140dp">
             </ImageView>
 
             <ImageView
