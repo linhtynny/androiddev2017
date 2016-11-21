@@ -26,6 +26,28 @@
         android:layout_marginRight="3dp">
 
         <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:layout_width="283dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:hint="@string/search"
+                    android:textSize="16sp" />
+
+            </SearchView>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:background="#c9cdd3"
