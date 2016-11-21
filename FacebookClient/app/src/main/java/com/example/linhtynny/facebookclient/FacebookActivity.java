@@ -124,6 +124,11 @@ public class FacebookActivity extends AppCompatActivity {
                 this.startActivity(intent);
                 break;
 
+            case R.id.action_setting:
+                Intent intent1 = new Intent(this, SettingActivity.class);
+                this.startActivity(intent1);
+                break;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
