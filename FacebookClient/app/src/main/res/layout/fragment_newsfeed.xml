@@ -90,6 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -98,15 +99,14 @@
                 android:layout_marginBottom="3dp"
                 app:srcCompat="@drawable/emma"/>
 
-            <TextView
-                android:text="@string/what_s_on_your_mind"
-                android:textSize="16dp"
-                android:textColor="#c4c4c4"
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textView1"
-                android:gravity="center_vertical"
-                android:layout_marginLeft="10dp"/>
+                android:inputType="text"
+                android:hint="@string/what_s_on_your_mind"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:layout_weight="1" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

@@ -26,7 +26,7 @@
         android:layout_marginTop="2dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:weightSum="1">
         <ImageView
             android:layout_width="50dp"
