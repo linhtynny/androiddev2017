@@ -86,6 +86,16 @@
             android:background="#8b8d8e"
             ></LinearLayout>
         <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px"/>
+        <AutoCompleteTextView android:id="@+id/autotext"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:nextFocusUp="@id/autotext"
+            android:nextFocusLeft="@id/autotext"/>
+        <LinearLayout
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="60dp"

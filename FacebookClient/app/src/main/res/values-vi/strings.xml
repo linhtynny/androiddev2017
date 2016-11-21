@@ -60,4 +60,6 @@
     <string name="single"> Độc thân </string>
     <string name="follow"> 100,000 người theo dõi</string>
     <string name="proflie"> Hồ sơ cá nhân</string>
+    <string name="help">Help</string>
+    <string name="logout">Logout</string>
 </resources>

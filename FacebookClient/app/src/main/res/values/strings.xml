@@ -73,6 +73,8 @@
     <string name="single"> Single</string>
     <string name="follow"> 100,000 followers</string>
     <string name="proflie"> Profile</string>
+    <string name="help">Help</string>
+    <string name="logout">Logout</string>
 
 
 </resources>

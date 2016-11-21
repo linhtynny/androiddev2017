@@ -119,10 +119,14 @@ public class FacebookActivity extends AppCompatActivity {
             }
         });
         t.start();
-                return true;
+            case R.id.action_logout:
+                Intent intent = new Intent(this, LoginActivity.class);
+                this.startActivity(intent);
+                break;
 
             default:
                 return super.onOptionsItemSelected(item);
         }
+        return true;
     }
 }
