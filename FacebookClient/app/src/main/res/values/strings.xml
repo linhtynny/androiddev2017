@@ -76,5 +76,18 @@
     <string name="help">Help</string>
     <string name="logout">Logout</string>
 
+    <string name="settings">Help and Settings</string>
+    <string name="apps">App Settings</string>
+    <string name="lang">Language </string>
+    <string name="nf">New Feed Preferences</string>
+    <string name="accseting">Account Settings</string>
+    <string name="codegenerate">Code Generator</string>
+    <string name="helpcenter">Help Center</string>
+    <string name="activitylog">Activity Log</string>
+    <string name="privacy"> Privacy Shortcuts</string>
+    <string name="term"> Term and Policies</string>
+    <string name="report">Report a problem</string>
+    <string name="data"> Mobile data</string>
+
 
 </resources>

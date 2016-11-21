@@ -62,4 +62,18 @@
     <string name="proflie"> Hồ sơ cá nhân</string>
     <string name="help">Help</string>
     <string name="logout">Logout</string>
+
+    <string name="settings">Cài đặt ứng dụng</string>
+    <string name="apps">Cái đặt ứng dụng</string>
+    <string name="lang">Ngôn ngữ </string>
+    <string name="nf">Tùy chọn bảng tin</string>
+    <string name="accseting">Cài đặt tài khoản</string>
+    <string name="codegenerate">Trình tạo mã</string>
+    <string name="helpcenter">Trung tâm trợ giúp</string>
+    <string name="activitylog">Nhật ký hoạt động</string>
+    <string name="privacy"> Lối tắt quyền riêng tư</string>
+    <string name="term"> Điều khoản và chính sách</string>
+    <string name="report">Báo cáo sự cố</string>
+    <string name="data"> Dữ liệu di động</string>
+
 </resources>
