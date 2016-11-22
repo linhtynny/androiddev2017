@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/action_search"
-        android:icon="@drawable/searchblack"
+        android:icon="@drawable/searchwhite"
         android:title="@string/search"
         app:showAsAction="ifRoom"/>
 
@@ -22,7 +22,8 @@
     <item
         android:id="@+id/action_help"
         android:icon="@drawable/setting"
-        android:title="@string/help" />
+        android:title="@string/help"
+        app:showAsAction="never"/>
     <item
         android:id="@+id/action_logout"
         android:icon="@drawable/setting"

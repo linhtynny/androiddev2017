@@ -32,6 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView22"
+                    android:layout_gravity="start"
                     android:textAlignment="viewStart"
                     android:textSize="25sp"
                     android:textStyle="normal|bold"
@@ -387,36 +388,6 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_weight="0.03" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="7dp"></LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="1">
-
-            <ImageView
-                app:srcCompat="@drawable/logout"
-                android:id="@+id/imageView15"
-                android:layout_height="30dp"
-                android:layout_width="30dp" />
-
-            <TextView
-                android:id="@+id/work4"
-                android:text="@string/logout"
-                android:layout_marginTop="7dp"
-                android:layout_marginLeft="35dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/black" />
 
         </LinearLayout>
     </LinearLayout>

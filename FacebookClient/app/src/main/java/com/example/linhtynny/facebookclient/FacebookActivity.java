@@ -119,6 +119,8 @@ public class FacebookActivity extends AppCompatActivity {
             }
         });
         t.start();
+                break;
+
             case R.id.action_logout:
                 Intent intent = new Intent(this, LoginActivity.class);
                 this.startActivity(intent);
