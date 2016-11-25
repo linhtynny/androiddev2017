@@ -76,7 +76,7 @@
                 <TextView
                     android:text="Sherlock Homes"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView21"
+                    android:id="@+id/textView1"
                     android:layout_width="match_parent"
                     android:textStyle="normal|bold"
                     android:textAlignment="center" />
@@ -99,7 +99,7 @@
                     android:text="@string/describe"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView22"
+                    android:id="@+id/textView2"
                     android:textAlignment="center"
                     android:textSize="18sp"
                     android:textStyle="normal|bold" />
@@ -113,6 +113,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:weightSum="1">
 
@@ -120,13 +121,13 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 app:srcCompat="@drawable/wok"
-                android:id="@+id/imageView18" />
+                android:id="@+id/imageView1" />
 
             <TextView
                 android:id="@+id/work1"
                 android:text="@string/work"
                 android:layout_marginTop="7dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -139,6 +140,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
         android:layout_weight="1"
         android:weightSum="1">
 
@@ -146,13 +148,13 @@
             android:layout_width="21dp"
             android:layout_height="23dp"
             app:srcCompat="@drawable/graduation"
-            android:id="@+id/imageView6" />
+            android:id="@+id/imageView2" />
 
         <TextView
-            android:id="@+id/work6"
+            android:id="@+id/work2"
             android:text="@string/edu"
             android:layout_marginTop="7dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
@@ -165,6 +167,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:weightSum="1">
 
@@ -172,13 +175,13 @@
                 android:layout_width="23dp"
                 android:layout_height="25dp"
                 app:srcCompat="@drawable/location"
-                android:id="@+id/imageView19" />
+                android:id="@+id/imageView3" />
 
             <TextView
                 android:id="@+id/hometown"
                 android:text="@string/hometown"
                 android:layout_marginTop="7dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -191,6 +194,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:weightSum="1">
 
@@ -198,13 +202,13 @@
                 android:layout_width="24dp"
                 android:layout_height="23dp"
                 app:srcCompat="@drawable/heart"
-                android:id="@+id/imageView20" />
+                android:id="@+id/imageView4" />
 
             <TextView
-                android:id="@+id/work"
+                android:id="@+id/work3"
                 android:text="@string/single"
                 android:layout_marginTop="7dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -217,6 +221,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:weightSum="1">
 
@@ -224,13 +229,13 @@
                 android:layout_width="23dp"
                 android:layout_height="24dp"
                 app:srcCompat="@drawable/phone"
-                android:id="@+id/imageView21" />
+                android:id="@+id/imageView5" />
 
             <TextView
-                android:id="@+id/work5"
+                android:id="@+id/work4"
                 android:text="0165574959"
                 android:layout_marginTop="7dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -243,6 +248,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:weightSum="1">
 
@@ -250,13 +256,13 @@
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 app:srcCompat="@drawable/follow"
-                android:id="@+id/ImageView22" />
+                android:id="@+id/ImageView6" />
 
             <TextView
-                android:id="@+id/work4"
+                android:id="@+id/work5"
                 android:text="@string/follow"
                 android:layout_marginTop="7dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -284,27 +290,11 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/status"/>
+                    app:srcCompat="@drawable/status"
+                    android:id="@+id/ImageView7" />
 
                 <TextView
                     android:text="@string/status"
-                    android:textColor="#000000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
-                    android:gravity="center"
-                    android:layout_marginLeft="5dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:gravity="center">
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/camera"/>
-                <TextView
-                    android:text="@string/photo"
                     android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -319,13 +309,32 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/location"/>
+                    app:srcCompat="@drawable/camera"
+                    android:id="@+id/ImageView8" />
+                <TextView
+                    android:text="@string/photo"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/location"
+                    android:id="@+id/ImageView9" />
                 <TextView
                     android:text="@string/check_in"
                     android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView5"
                     android:gravity="center"
                     android:layout_marginLeft="5dp"/>
             </LinearLayout>
@@ -347,7 +356,8 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="3dp"
-                app:srcCompat="@drawable/cumberbatch"/>
+                app:srcCompat="@drawable/cumberbatch"
+                android:id="@+id/ImageView10" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -387,7 +397,8 @@
                     android:layout_marginTop="3dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="3dp"
-                    app:srcCompat="@drawable/cumberbatch"/>
+                    app:srcCompat="@drawable/cumberbatch"
+                    android:id="@+id/ImageView11" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -435,7 +446,8 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
-                        app:srcCompat="@drawable/likesmall"/>
+                        app:srcCompat="@drawable/likesmall"
+                        android:id="@+id/ImageView12" />
                     <TextView
                         android:text="@string/like"
                         android:textColor="#646566"
@@ -453,7 +465,8 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
-                        app:srcCompat="@drawable/comments"/>
+                        app:srcCompat="@drawable/comments"
+                        android:id="@+id/ImageView13" />
 
                     <TextView
                         android:text="@string/comment"
@@ -472,7 +485,8 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
-                        app:srcCompat="@drawable/share"/>
+                        app:srcCompat="@drawable/share"
+                        android:id="@+id/ImageView14" />
 
                     <TextView
                         android:text="@string/share"
@@ -588,7 +602,7 @@
                         android:textColor="#646566"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView6"
+                        android:id="@+id/textView13"
                         android:gravity="center"
                         android:layout_marginLeft="5dp"/>
                 </LinearLayout>
@@ -606,7 +620,7 @@
                         android:textColor="#646566"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView13"
+                        android:id="@+id/textView14"
                         android:gravity="center"
                         android:layout_marginLeft="5dp"/>
                 </LinearLayout>
@@ -695,7 +709,7 @@
                         android:textColor="#646566"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView14"
+                        android:id="@+id/textView15"
                         android:gravity="center"
                         android:layout_marginLeft="5dp"
                         tools:ignore="DuplicateIds" />
@@ -714,7 +728,7 @@
                         android:textColor="#646566"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView15"
+                        android:id="@+id/textView16"
                         android:gravity="center"
                         android:layout_marginLeft="5dp"/>
                 </LinearLayout>
@@ -732,7 +746,7 @@
                         android:textColor="#646566"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView16"
+                        android:id="@+id/textView17"
                         android:gravity="center"
                         android:layout_marginLeft="5dp"/>
                 </LinearLayout>
@@ -819,7 +833,7 @@
                         android:textColor="#646566"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView5"
+                        android:id="@+id/textView18"
                         android:gravity="center"
                         android:layout_marginLeft="5dp"/>
                 </LinearLayout>
@@ -837,7 +851,7 @@
                         android:textColor="#646566"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView17"
+                        android:id="@+id/textView19"
                         android:gravity="center"
                         android:layout_marginLeft="5dp"/>
                 </LinearLayout>
@@ -855,7 +869,7 @@
                         android:textColor="#646566"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView7"
+                        android:id="@+id/textView20"
                         android:gravity="center"
                         android:layout_marginLeft="5dp"/>
                 </LinearLayout>
