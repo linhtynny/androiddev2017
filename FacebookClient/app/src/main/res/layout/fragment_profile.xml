@@ -14,15 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#b7d8f7">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="23dp"
-                android:text="@string/proflie"
-                android:textColor="#000000"
-                android:gravity="center"
-                />
-        </LinearLayout>
+            android:background="#b7d8f7"></LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
