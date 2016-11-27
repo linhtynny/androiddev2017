@@ -41,7 +41,6 @@ public class FacebookActivity extends AppCompatActivity {
         pager.setOffscreenPageLimit(5);
         pager.setAdapter(adapter);
 
-
         TabLayout tableLayout = (TabLayout) findViewById(R.id.container1);
         tableLayout.setupWithViewPager(pager);
 
