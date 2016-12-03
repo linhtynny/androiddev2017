@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FacebookClient</string>
-
+    <string name="app_id">213537312429718</string>
+    <string name="fb_login_protocol_scheme">fb213537312429718</string>
 
     <string name="noti1"> Your friend posted on your timeline </string>
     <string name="noti2"> Your friend liked your post </string>
@@ -88,6 +89,7 @@
     <string name="term"> Term and Policies</string>
     <string name="report">Report a problem</string>
     <string name="data"> Mobile data</string>
+    <string name="action_settings">LogOut</string>
 
 
 </resources>
