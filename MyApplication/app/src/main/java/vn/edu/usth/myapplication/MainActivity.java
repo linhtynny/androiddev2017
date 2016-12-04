@@ -9,11 +9,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -52,6 +54,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ShareDialog mShareDialog;
+    private String[] mNavigationDrawerItemTitles;
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,16 +67,30 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        PagerAdapter adapter = new HomeFragmentPagerAdapter(
-        getSupportFragmentManager());
+//        PagerAdapter adapter = new HomeFragmentPagerAdapter(
+//        getSupportFragmentManager());
 
 
-        ViewPager pager = (ViewPager) findViewById(R.id.container2);
-        pager.setOffscreenPageLimit(4);
-        pager.setAdapter(adapter);
+//        ViewPager pager = (ViewPager) findViewById(R.id.container2);
+//        pager.setOffscreenPageLimit(4);
+//        pager.setAdapter(adapter);
+//
+//        TabLayout tableLayout = (TabLayout) findViewById(R.id.container1);
+//        tableLayout.setupWithViewPager(pager);
 
-        TabLayout tableLayout = (TabLayout) findViewById(R.id.container1);
-        tableLayout.setupWithViewPager(pager);
+//        mNavigationDrawerItemTitles= getResources().getStringArray(R.array.navigation_drawer_items_array);
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+//
+//        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[3];
+//
+//        drawerItem[0] = new ObjectDrawerItem(R.drawable.acc, "Timeline");
+//        drawerItem[1] = new ObjectDrawerItem(R.drawable.nf, "Newsfeed");
+//        drawerItem[2] = new ObjectDrawerItem(R.drawable.follow, "Friendlist");
+//
+//        DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.listview_item_row, drawerItem);
+//        mDrawerList.setAdapter(adapter);
+//        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
         Bundle inBundle = getIntent().getExtras();
         String name = inBundle.get("name").toString();
@@ -95,40 +114,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
-        private final int PAGE_COUNT = 4;
-        private String location[] = new String[]{"NewsFeed", "Friend", "Notification", "Message", "Profile"};
-
-        public HomeFragmentPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public int getCount() {
-            return (location.length); // number of pages for a ViewPager
-        }
-
-        @Override
-        public Fragment getItem(int page) {
-//                return new NotificationFragment();
-//                return new InboxFragment();
-//omeFrag
-            switch (page) {
-                case 0: return NewsfeedFragment.newInstance("Newsfeed");
-                case 1: return FriendFragment.newInstance("Friend");
-                case 2: return NotificationFragment.newInstance("Notification");
-                case 3: return ProfileFragment.newInstance("Profile");
-            }
-            return new ProfileFragment(); // failsafe
-
-        }
-
-        @Override
-        public CharSequence getPageTitle(int page) {
-            // returns a tab title corresponding to the specified page
-            return location[page];
-        }
-    }
+//    class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
+//        private final int PAGE_COUNT = 4;
+//        private String location[] = new String[]{"NewsFeed", "Friend", "Notification", "Message", "Profile"};
+//
+//        public HomeFragmentPagerAdapter(FragmentManager fm) {
+//            super(fm);
+//        }
+//
+//        @Override
+//        public int getCount() {
+//            return (location.length); // number of pages for a ViewPager
+//        }
+//
+//        @Override
+//        public Fragment getItem(int page) {
+////                return new NotificationFragment();
+////                return new InboxFragment();
+////omeFrag
+//            switch (page) {
+//                case 0:
+////                    return NewsfeedFragment.newInstance("Newsfeed");
+//                    return new NewsfeedFragment();
+//                case 1:
+////                    return FriendFragment.newInstance("Friend");
+//                    return new FriendFragment();
+//                case 2:
+////                    return NotificationFragment.newInstance("Notification");
+//                    return new NotificationFragment();
+//                case 3:
+////                    return ProfileFragment.newInstance("Profile");
+//                    return new ProfileFragment();
+//            }
+//            return new ProfileFragment(); // failsafe
+//
+//        }
+//
+//        @Override
+//        public CharSequence getPageTitle(int page) {
+//            // returns a tab title corresponding to the specified page
+//            return location[page];
+//        }
+//    }
 
 
 
@@ -159,12 +186,49 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+//    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+//
+//        @Override
+//        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//            selectItem(position);
+//        }
+//
+//    }
+//
+//    private void selectItem(int position) {
+//
+//
+//        switch (position) {
+//            case 0:
+//                logout();
+//                break;
+//            case 1:
+//                logout();
+//                break  ;
+//            case 2:
+//                getFriendlist();
+//                break;
+//
+//            default:
+//                break;
+//        }
+//
+//
+//        mDrawerList.setItemChecked(position, true);
+//        mDrawerList.setSelection(position);
+//        getActionBar().setTitle(mNavigationDrawerItemTitles[position]);
+//        mDrawerLayout.closeDrawer(mDrawerList);
+//
+//    }
+
     public void logout(){
         LoginManager.getInstance().logOut();
         Intent login = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(login);
         finish();
     }
+
+
 
 
     public void getFriendlist() {

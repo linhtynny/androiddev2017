@@ -31,6 +31,8 @@ public class ProfileFragment extends Fragment {
         return profilefragment;
     }
 
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container2, Bundle savedInstanceStase) {
