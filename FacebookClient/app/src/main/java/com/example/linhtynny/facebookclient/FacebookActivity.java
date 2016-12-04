@@ -25,7 +25,7 @@ import com.example.linhtynny.facebookclient.fragment.NewsfeedFragment;
 import com.example.linhtynny.facebookclient.fragment.NotificationFragment;
 import com.example.linhtynny.facebookclient.fragment.ProfileFragment;
 
-public class FacebookActivity extends AppCompatActivity {
+public class    FacebookActivity extends AppCompatActivity {
     static CharSequence content;
 
     @Override
@@ -94,23 +94,6 @@ public class FacebookActivity extends AppCompatActivity {
             toast.show();
         }
     };
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            logout();
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

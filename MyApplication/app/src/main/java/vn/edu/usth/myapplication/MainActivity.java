@@ -3,6 +3,12 @@ package vn.edu.usth.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -15,6 +21,12 @@ import com.facebook.login.LoginManager;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
 
+import vn.edu.usth.myapplication.fragment.FriendFragment;
+import vn.edu.usth.myapplication.fragment.LoginFragment;
+import vn.edu.usth.myapplication.fragment.NewsfeedFragment;
+import vn.edu.usth.myapplication.fragment.NotificationFragment;
+import vn.edu.usth.myapplication.fragment.ProfileFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     private ShareDialog mShareDialog;
@@ -25,6 +37,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        PagerAdapter adapter = new HomeFragmentPagerAdapter(
+        getSupportFragmentManager());
+
+
+        ViewPager pager = (ViewPager) findViewById(R.id.container2);
+        pager.setOffscreenPageLimit(4);
+        pager.setAdapter(adapter);
+
+        TabLayout tableLayout = (TabLayout) findViewById(R.id.container1);
+        tableLayout.setupWithViewPager(pager);
 
         Bundle inBundle = getIntent().getExtras();
         String name = inBundle.get("name").toString();
@@ -46,6 +69,43 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
+        private final int PAGE_COUNT = 4;
+        private String location[] = new String[]{"NewsFeed", "Friend", "Notification", "Message", "Profile"};
+
+        public HomeFragmentPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public int getCount() {
+            return (location.length); // number of pages for a ViewPager
+        }
+
+        @Override
+        public Fragment getItem(int page) {
+//                return new NotificationFragment();
+//                return new InboxFragment();
+//omeFrag
+            switch (page) {
+                case 0: return NewsfeedFragment.newInstance("Newsfeed");
+                case 1: return FriendFragment.newInstance("Friend");
+                case 2: return NotificationFragment.newInstance("Notification");
+                case 3: return ProfileFragment.newInstance("Profile");
+            }
+            return new ProfileFragment(); // failsafe
+
+        }
+
+        @Override
+        public CharSequence getPageTitle(int page) {
+            // returns a tab title corresponding to the specified page
+            return location[page];
+        }
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
