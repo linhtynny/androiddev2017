@@ -233,25 +233,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void getFriendlist() {
         GraphRequestAsyncTask graphRequestAsyncTask = new GraphRequest(
-                        AccessToken.getCurrentAccessToken(),
-                        "/me/friends",
-                        null,
-                        HttpMethod.GET,
-                        new GraphRequest.Callback() {
-                            public void onCompleted(GraphResponse response) {
-                                Intent intent = new Intent(MainActivity.this,FriendsList.class);
-                                try {
-                                    JSONArray rawName = response.getJSONObject().getJSONArray("data");
-                                    intent.putExtra("jsondata", rawName.toString());
-                                    startActivity(intent);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }
+                AccessToken.getCurrentAccessToken(),
+                "/me/friends",
+                null,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+                        Intent intent = new Intent(MainActivity.this,FriendsList.class);
+                        try {
+                            JSONArray rawName = response.getJSONObject().getJSONArray("data");
+                            intent.putExtra("jsondata", rawName.toString());
+                            startActivity(intent);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
-                ).executeAsync();
+                    }
+                }
+        ).executeAsync();
 
-            }
+    }
 
 
 
