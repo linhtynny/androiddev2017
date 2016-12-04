@@ -36,7 +36,7 @@ import com.facebook.share.widget.ShareDialog;
 
 
 import vn.edu.usth.myapplication.fragment.FriendFragment;
-import vn.edu.usth.myapplication.fragment.LoginFragment;
+//import vn.edu.usth.myapplication.fragment.LoginFragment;
 import vn.edu.usth.myapplication.fragment.NewsfeedFragment;
 import vn.edu.usth.myapplication.fragment.NotificationFragment;
 import vn.edu.usth.myapplication.fragment.ProfileFragment;
