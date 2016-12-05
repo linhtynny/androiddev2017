@@ -53,7 +53,7 @@ public class Newsfeed extends AppCompatActivity {
         try {
             newsfeedList = new JSONArray(jsondata);
             for (int l=0; l < newsfeedList.length(); l++) {
-                newsfeed.add(newsfeedList.getJSONObject(l).getString("name"));
+                newsfeed.add(newsfeedList.getJSONObject(l).getString("message"));
             }
         } catch (JSONException e) {
             e.printStackTrace();
