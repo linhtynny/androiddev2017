@@ -2,10 +2,12 @@ package vn.edu.usth.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -22,11 +24,11 @@ import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-
-import java.util.Arrays;
 
 import vn.edu.usth.myapplication.MainActivity;
 
@@ -91,8 +93,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onError(FacebookException e) {
             }
         };
-        loginButton.setReadPermissions(Arrays.asList(
-                "public_profile", "email", "user_birthday", "user_friends"));
+        loginButton.setReadPermissions("user_friends,user_posts");
         loginButton.registerCallback(callbackManager, callback);
 
     }

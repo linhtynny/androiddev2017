@@ -24,11 +24,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
-import com.facebook.AccessTokenTracker;
-import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphRequestAsyncTask;
 import com.facebook.GraphResponse;
@@ -48,8 +45,6 @@ import vn.edu.usth.myapplication.fragment.ProfileFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONStringer;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -97,56 +92,13 @@ public class MainActivity extends AppCompatActivity {
 //        mDrawerList.setAdapter(adapter);
 //        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-//        FacebookSdk.sdkInitialize(this.getApplicationContext());
-//        callbackManager = CallbackManager.Factory.create();
-//
-//        accessTokenTracker = new AccessTokenTracker() {
-//            @Override
-//            protected void onCurrentAccessTokenChanged(
-//                    AccessToken oldAccessToken,
-//                    AccessToken currentAccessToken) {
-//                // Set the access token using
-//                // currentAccessToken when it's loaded or set.
-//            }
-//        };
-//
-//        accessToken = AccessToken.getCurrentAccessToken();
-
-//        GraphRequest request = GraphRequest.newMeRequest(
-//                accessToken,
-//                new GraphRequest.GraphJSONObjectCallback() {
-//                    @Override
-//                    public void onCompleted(
-//                            JSONObject object,
-//                            GraphResponse response) {
-//                        // Application code
-//                    }
-//                });
-//        Bundle parameters = new Bundle();
-//        parameters.putString("fields", "id,name,link");
-//        request.setParameters(parameters);
-//        request.executeAsync();
-
         Bundle inBundle = getIntent().getExtras();
         String name = inBundle.get("name").toString();
         String surname = inBundle.get("surname").toString();
-//        String birthday = inBundle.get("birthday").toString();
         String imageUrl = inBundle.get("imageUrl").toString();
 
         TextView nameView = (TextView)findViewById(R.id.nameAndSurname);
         nameView.setText(""+name+" "+surname);
-
-//        TextView bodView = (TextView)findViewById(R.id.dob);
-//        nameView.setText(birthday);
-
-//        Intent intent = getIntent();
-//        String jsondata = intent.getStringExtra("jsondata");
-//
-//        JSONStringer dob;
-//        try{
-//           dob = new JSONStringer(jsondata);
-//        }
-
 
         mShareDialog = new ShareDialog(this);
         new DownloadImage((ImageView) findViewById(R.id.profileImage)).execute(imageUrl);
@@ -160,12 +112,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-//    @Override
-//    public void onDestroy() {
-//        super.onDestroy();
-//        accessTokenTracker.stopTracking();
-//    }
 
 
 //    class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
@@ -232,6 +178,10 @@ public class MainActivity extends AppCompatActivity {
             getFriendlist();
             return true;
         }
+        if (id == R.id.timelinebutton) {
+            getTimelinePosts();
+            return true;
+        }
         if (id == R.id.action_settings) {
             logout();
             return true;
@@ -282,27 +232,52 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+
+
+
     public void getFriendlist() {
         GraphRequestAsyncTask graphRequestAsyncTask = new GraphRequest(
-                        AccessToken.getCurrentAccessToken(),
-                        "/me/friends",
-                        null,
-                        HttpMethod.GET,
-                        new GraphRequest.Callback() {
-                            public void onCompleted(GraphResponse response) {
-                                Intent intent = new Intent(MainActivity.this,FriendsList.class);
-                                try {
-                                    JSONArray rawName = response.getJSONObject().getJSONArray("data");
-                                    intent.putExtra("jsondata", rawName.toString());
-                                    startActivity(intent);
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }
+                AccessToken.getCurrentAccessToken(),
+                "/me/friends",
+                null,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+                        Intent intent = new Intent(MainActivity.this,FriendsList.class);
+                        try {
+                            JSONArray rawName = response.getJSONObject().getJSONArray("data");
+                            intent.putExtra("jsondata", rawName.toString());
+                            startActivity(intent);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
-                ).executeAsync();
+                    }
+                }
+        ).executeAsync();
 
-            }
+    }
+
+    public void getTimelinePosts() {
+        GraphRequestAsyncTask graphRequestAsyncTask = new GraphRequest(
+                AccessToken.getCurrentAccessToken(),
+                "/me/feed",
+                null,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+                        Intent intent = new Intent(MainActivity.this,Timeline.class);
+                        try {
+                            JSONArray data = response.getJSONObject().getJSONArray("data");
+                            intent.putExtra("jsondata", data.toString());
+                            startActivity(intent);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+        ).executeAsync();
+
+    }
 
 
 

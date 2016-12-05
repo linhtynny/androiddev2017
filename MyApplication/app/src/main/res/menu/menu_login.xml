@@ -11,7 +11,14 @@
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:title="Timeline"
+        android:id="@+id/timelinebutton"
+        />
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:title="FriendList"
         android:id="@+id/friendlistbutton"
         />
+
 </menu>
