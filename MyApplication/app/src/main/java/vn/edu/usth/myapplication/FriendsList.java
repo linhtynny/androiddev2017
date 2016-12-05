@@ -103,9 +103,6 @@ public class FriendsList extends AppCompatActivity {
         finish();
     }
 
-
-
-
     public void getFriendlist() {
         GraphRequestAsyncTask graphRequestAsyncTask = new GraphRequest(
                 AccessToken.getCurrentAccessToken(),
