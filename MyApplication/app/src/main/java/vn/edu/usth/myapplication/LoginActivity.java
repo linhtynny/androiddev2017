@@ -26,6 +26,8 @@ import com.facebook.login.widget.LoginButton;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.util.Arrays;
+
 import vn.edu.usth.myapplication.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -89,7 +91,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onError(FacebookException e) {
             }
         };
-        loginButton.setReadPermissions("user_friends");
+        loginButton.setReadPermissions(Arrays.asList(
+                "public_profile", "email", "user_birthday", "user_friends"));
         loginButton.registerCallback(callbackManager, callback);
 
     }
