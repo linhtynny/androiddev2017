@@ -12,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -45,11 +46,7 @@ import vn.edu.usth.myapplication.fragment.ProfileFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.ArrayList;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -97,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         String surname = inBundle.get("surname").toString();
         String imageUrl = inBundle.get("imageUrl").toString();
 
+
         TextView nameView = (TextView)findViewById(R.id.nameAndSurname);
         nameView.setText(""+name+" "+surname);
 
@@ -111,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 mShareDialog.show(content);
             }
         });
+        getProfileInformation();
     }
 
 
@@ -279,6 +278,36 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void getProfileInformation() {
+        GraphRequest request = GraphRequest.newMeRequest(AccessToken.getCurrentAccessToken(),
+                new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(JSONObject object, GraphResponse response) {
+                        final JSONObject jsonObject = response.getJSONObject();
+                        try{
+                            String relationship_status = jsonObject.getString("relationship_status");
+                            TextView relationship_statusText = (TextView)findViewById(R.id.relationship_status);
+                            relationship_statusText.setText(""+relationship_status);
+
+                            JSONObject hometownobject = jsonObject.getJSONObject("hometown");
+                            String hometown = hometownobject.getString("name");
+                            TextView hometownText = (TextView)findViewById(R.id.hometown);
+                            hometownText.setText(""+hometown);
+
+                            String birthday = jsonObject.getString("birthday");
+                            TextView birthdayText = (TextView)findViewById(R.id.birthday);
+                            birthdayText.setText(""+birthday);
+                        } catch (JSONException e){
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
+        Bundle parameters = new Bundle();
+        parameters.putString("fields", "relationship_status,hometown{name},birthday");
+        request.setParameters(parameters);
+        request.executeAsync();
+    }
 
 
 }
