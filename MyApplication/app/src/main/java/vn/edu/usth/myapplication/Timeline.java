@@ -114,6 +114,10 @@ public class Timeline extends AppCompatActivity {
             getTimelinePosts();
             return true;
         }
+        if (id == R.id.newsfeedButton) {
+            getNewsfeed();
+            return true;
+        }
         if (id == R.id.action_settings) {
             logout();
             return true;
@@ -174,5 +178,26 @@ public class Timeline extends AppCompatActivity {
                 }
         ).executeAsync();
 
+    }
+
+    public void getNewsfeed(){
+        GraphRequestAsyncTask graphRequestAsyncTask = new GraphRequest(
+                AccessToken.getCurrentAccessToken(),
+                "/me/feed",
+                null,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+                        Intent intent = new Intent(Timeline.this,Newsfeed.class);
+                        try {
+                            JSONArray data = response.getJSONObject().getJSONArray("data");
+                            intent.putExtra("jsondata", data.toString());
+                            startActivity(intent);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+        ).executeAsync();
     }
 }

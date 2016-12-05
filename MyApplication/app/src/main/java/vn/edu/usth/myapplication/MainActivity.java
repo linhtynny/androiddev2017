@@ -181,6 +181,10 @@ public class MainActivity extends AppCompatActivity {
             getTimelinePosts();
             return true;
         }
+        if (id == R.id.newsfeedButton) {
+            getNewsfeed();
+            return true;
+        }
         if (id == R.id.action_settings) {
             logout();
             return true;
@@ -307,6 +311,27 @@ public class MainActivity extends AppCompatActivity {
         parameters.putString("fields", "relationship_status,hometown{name},birthday");
         request.setParameters(parameters);
         request.executeAsync();
+    }
+
+    public void getNewsfeed(){
+        GraphRequestAsyncTask graphRequestAsyncTask = new GraphRequest(
+                AccessToken.getCurrentAccessToken(),
+                "/me/feed",
+                null,
+                HttpMethod.GET,
+                new GraphRequest.Callback() {
+                    public void onCompleted(GraphResponse response) {
+                        Intent intent = new Intent(MainActivity.this,Newsfeed.class);
+                        try {
+                            JSONArray data = response.getJSONObject().getJSONArray("data");
+                            intent.putExtra("jsondata", data.toString());
+                            startActivity(intent);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+        ).executeAsync();
     }
 
 
