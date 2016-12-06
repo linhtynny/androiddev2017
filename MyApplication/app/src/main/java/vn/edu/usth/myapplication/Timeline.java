@@ -47,7 +47,7 @@ public class Timeline extends AppCompatActivity {
 
         JSONArray timelinedata;
         ArrayList<String> feed = new ArrayList<String>();
-
+        List<ThreeStrings> threeStringsList = new ArrayList<>();
 
         mShareDialog = new ShareDialog(this);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -61,28 +61,31 @@ public class Timeline extends AppCompatActivity {
         try {
             timelinedata = new JSONArray(jsondata);
             for (int l=0; l < timelinedata.length(); l++) {
-                feed.add(timelinedata.getJSONObject(l).getString("story"));
-                feed.add(timelinedata.getJSONObject(l).getString("message"));
-                feed.add(timelinedata.getJSONObject(l).getString("created_time"));
+//                feed.add(timelinedata.getJSONObject(l).getString("story"));
+//                feed.add(timelinedata.getJSONObject(l).getString("message"));
+//                feed.add(timelinedata.getJSONObject(l).getString("created_time"));
+
+                ThreeStrings threeStrings = new ThreeStrings(timelinedata.getJSONObject(l).getString("story"), timelinedata.getJSONObject(l).getString("message"), timelinedata.getJSONObject(l).getString("created_time"));
+                threeStringsList.add(threeStrings);
+
+
+
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
+        ThreeVerticalTextViewsAdapter threeTextViewsAdapter = new ThreeVerticalTextViewsAdapter(this, R.layout.three_vertical_text_views_layout, threeStringsList);
+        ListView llistView = (ListView)findViewById(R.id.linearListview);
+        llistView.setAdapter(threeTextViewsAdapter);
+
+//        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_listview, feed); // simple textview for list item
+//        ListView listView = (ListView) findViewById(R.id.listView);
+//        listView.setAdapter(adapter);
 
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_listview, feed); // simple textview for list item
-        ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(adapter);
-
-        List<ThreeStrings> threeStringsList = new ArrayList<>();
-        ThreeStrings threeStrings = new ThreeStrings("a", "b", "c");
-        threeStringsList.add(threeStrings);
 
 
-        ListView llistView = (ListView)findViewById(R.id.listView);
-        ThreeVerticalTextViewsAdapter threeHorizontalTextViewsAdapter = new ThreeVerticalTextViewsAdapter(this, R.layout.three_vertical_text_views_layout, threeStringsList);
-        llistView.setAdapter(threeHorizontalTextViewsAdapter);
 
 
 //

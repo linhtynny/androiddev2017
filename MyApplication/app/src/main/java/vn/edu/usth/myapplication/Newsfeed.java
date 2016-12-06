@@ -24,6 +24,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Newsfeed extends AppCompatActivity {
     private ShareDialog mShareDialog;
@@ -38,8 +39,9 @@ public class Newsfeed extends AppCompatActivity {
         Intent intent = getIntent();
         String jsondata = intent.getStringExtra("jsondata");
 
-        JSONArray newsfeedList;
+        JSONArray timelinedata;
         ArrayList<String> newsfeed = new ArrayList<String>();
+        List<ThreeStrings> threeStringsList = new ArrayList<>();
 
         mShareDialog = new ShareDialog(this);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -51,17 +53,24 @@ public class Newsfeed extends AppCompatActivity {
             }
         });
         try {
-            newsfeedList = new JSONArray(jsondata);
-            for (int l=0; l < newsfeedList.length(); l++) {
-                newsfeed.add(newsfeedList.getJSONObject(l).getString("message"));
+            timelinedata = new JSONArray(jsondata);
+            for (int l = 0; l < timelinedata.length(); l++) {
+//                feed.add(timelinedata.getJSONObject(l).getString("story"));
+//                feed.add(timelinedata.getJSONObject(l).getString("message"));
+//                feed.add(timelinedata.getJSONObject(l).getString("created_time"));
+
+                ThreeStrings threeStrings = new ThreeStrings(timelinedata.getJSONObject(l).getString("story"), timelinedata.getJSONObject(l).getString("message"), timelinedata.getJSONObject(l).getString("created_time"));
+                threeStringsList.add(threeStrings);
+
+
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_listview, newsfeed); // simple textview for list item
-        ListView listView = (ListView) findViewById(R.id.listViewNewsfeed);
-        listView.setAdapter(adapter);
+        ThreeVerticalTextViewsAdapter threeTextViewsAdapter = new ThreeVerticalTextViewsAdapter(this, R.layout.three_vertical_text_views_layout, threeStringsList);
+        ListView llistView = (ListView) findViewById(R.id.linearListview);
+        llistView.setAdapter(threeTextViewsAdapter);
     }
 
     @Override

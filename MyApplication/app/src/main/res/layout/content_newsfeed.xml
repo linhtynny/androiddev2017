@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Newsfeed"
-        android:id="@+id/textViewNewsfeed"
+        android:id="@+id/textView"
         android:layout_alignParentTop="false"
         android:layout_marginTop="80dp"
         android:layout_centerHorizontal="true"
@@ -26,7 +26,7 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewNewsfeed"
-        android:id="@+id/listViewNewsfeed"
+        android:id="@+id/linearListview"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
