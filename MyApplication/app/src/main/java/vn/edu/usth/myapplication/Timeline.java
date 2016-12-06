@@ -75,14 +75,14 @@ public class Timeline extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
-        List<ThreeStrings> threeStringsList = new ArrayList<>();
-        ThreeStrings threeStrings = new ThreeStrings("a", "b", "c");
-        threeStringsList.add(threeStrings);
-
-
-        ListView llistView = (ListView)findViewById(R.id.listView);
-        ThreeVerticalTextViewsAdapter threeHorizontalTextViewsAdapter = new ThreeVerticalTextViewsAdapter(this, R.layout.three_vertical_text_views_layout, threeStringsList);
-        llistView.setAdapter(threeHorizontalTextViewsAdapter);
+//        List<ThreeStrings> threeStringsList = new ArrayList<>();
+//        ThreeStrings threeStrings = new ThreeStrings("a", "b", "c");
+//        threeStringsList.add(threeStrings);
+//
+//
+//        ListView llistView = (ListView)findViewById(R.id.listView);
+//        ThreeVerticalTextViewsAdapter threeHorizontalTextViewsAdapter = new ThreeVerticalTextViewsAdapter(this, R.layout.three_vertical_text_views_layout, threeStringsList);
+//        llistView.setAdapter(threeHorizontalTextViewsAdapter);
 
 
 //
