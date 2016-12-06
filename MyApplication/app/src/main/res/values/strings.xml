@@ -12,4 +12,10 @@
     <string name="notifications">Notifications</string>
     <string name="messages"> Messages </string>
     <string name="friends">Friends</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Timeline</item>
+        <item>Newsfeed</item>
+        <item>Friendlist</item>
+    </string-array>
 </resources>

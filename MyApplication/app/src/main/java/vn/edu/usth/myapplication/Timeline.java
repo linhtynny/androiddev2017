@@ -9,7 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
@@ -23,14 +25,19 @@ import com.facebook.share.widget.ShareDialog;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.sql.Time;
 import java.util.ArrayList;
+import java.util.List;
 
-public class FriendsList extends AppCompatActivity {
+public class Timeline extends AppCompatActivity {
     private ShareDialog mShareDialog;
+    private String left;
+    private String right;
+    private String centre;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friends_list);
+        setContentView(R.layout.activity_time_line);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -38,9 +45,9 @@ public class FriendsList extends AppCompatActivity {
         Intent intent = getIntent();
         String jsondata = intent.getStringExtra("jsondata");
 
-        JSONArray friendslist;
-        ArrayList<String> friends = new ArrayList<String>();
-
+        JSONArray timelinedata;
+        ArrayList<String> feed = new ArrayList<String>();
+        List<ThreeStrings> threeStringsList = new ArrayList<>();
 
         mShareDialog = new ShareDialog(this);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -52,18 +59,40 @@ public class FriendsList extends AppCompatActivity {
             }
         });
         try {
-            friendslist = new JSONArray(jsondata);
-            for (int l=0; l < friendslist.length(); l++) {
-                friends.add(friendslist.getJSONObject(l).getString("name"));
+            timelinedata = new JSONArray(jsondata);
+            for (int l=0; l < timelinedata.length(); l++) {
+//                feed.add(timelinedata.getJSONObject(l).getString("story"));
+//                feed.add(timelinedata.getJSONObject(l).getString("message"));
+//                feed.add(timelinedata.getJSONObject(l).getString("created_time"));
+
+                ThreeStrings threeStrings = new ThreeStrings(timelinedata.getJSONObject(l).getString("story"), timelinedata.getJSONObject(l).getString("message"), timelinedata.getJSONObject(l).getString("created_time"));
+                threeStringsList.add(threeStrings);
+
+
+
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_listview, friends); // simple textview for list item
-        ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(adapter);
+        ThreeVerticalTextViewsAdapter threeTextViewsAdapter = new ThreeVerticalTextViewsAdapter(this, R.layout.three_vertical_text_views_layout, threeStringsList);
+        ListView llistView = (ListView)findViewById(R.id.linearListview);
+        llistView.setAdapter(threeTextViewsAdapter);
+
+//        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_listview, feed); // simple textview for list item
+//        ListView listView = (ListView) findViewById(R.id.listView);
+//        listView.setAdapter(adapter);
+
+
+
+
+
+
+//
+// get data from the table by the ListAdapter
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -102,10 +131,13 @@ public class FriendsList extends AppCompatActivity {
 
     public void logout(){
         LoginManager.getInstance().logOut();
-        Intent login = new Intent(FriendsList.this, LoginActivity.class);
+        Intent login = new Intent(Timeline.this, LoginActivity.class);
         startActivity(login);
         finish();
     }
+
+
+
 
     public void getFriendlist() {
         GraphRequestAsyncTask graphRequestAsyncTask = new GraphRequest(
@@ -115,7 +147,7 @@ public class FriendsList extends AppCompatActivity {
                 HttpMethod.GET,
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
-                        Intent intent = new Intent(FriendsList.this,FriendsList.class);
+                        Intent intent = new Intent(Timeline.this,FriendsList.class);
                         try {
                             JSONArray rawName = response.getJSONObject().getJSONArray("data");
                             intent.putExtra("jsondata", rawName.toString());
@@ -137,7 +169,7 @@ public class FriendsList extends AppCompatActivity {
                 HttpMethod.GET,
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
-                        Intent intent = new Intent(FriendsList.this,Timeline.class);
+                        Intent intent = new Intent(Timeline.this,Timeline.class);
                         try {
                             JSONArray data = response.getJSONObject().getJSONArray("data");
                             intent.putExtra("jsondata", data.toString());
@@ -159,7 +191,7 @@ public class FriendsList extends AppCompatActivity {
                 HttpMethod.GET,
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
-                        Intent intent = new Intent(FriendsList.this,Newsfeed.class);
+                        Intent intent = new Intent(Timeline.this,Newsfeed.class);
                         try {
                             JSONArray data = response.getJSONObject().getJSONArray("data");
                             intent.putExtra("jsondata", data.toString());
@@ -171,5 +203,4 @@ public class FriendsList extends AppCompatActivity {
                 }
         ).executeAsync();
     }
-
 }

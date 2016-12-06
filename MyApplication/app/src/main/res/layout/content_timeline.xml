@@ -9,14 +9,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="vn.edu.usth.myapplication.FriendsList"
-    tools:showIn="@layout/activity_friends_list">
+    tools:context="vn.edu.usth.myapplication.Timeline"
+    tools:showIn="@layout/activity_time_line">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Friends"
+        android:text="Timeline"
         android:id="@+id/textView"
         android:layout_alignParentTop="false"
         android:layout_marginTop="80dp"
@@ -26,7 +26,8 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
+        android:id="@+id/linearListview"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

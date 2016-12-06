@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="vn.edu.usth.myapplication.FriendsList">
+    tools:context="vn.edu.usth.myapplication.Timeline">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -16,7 +16,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <include layout="@layout/content_friends_list" />
+    <include layout="@layout/content_timeline" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

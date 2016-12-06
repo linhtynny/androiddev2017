@@ -35,7 +35,7 @@ public class FriendFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container2, Bundle savedInstanceStase) {
         View v = new View(getContext());
-        v = inflater.inflate(R.layout.content_main, container2, false);
+        v = inflater.inflate(R.layout.activity_listview, container2, false);
 
         return v;
     }
